@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <title>Mi Portafolio</title>
+    <style>
+      /* Paleta de colores */
+      :root {
+        --primary-color: #1a1a1a; /* Negro grisáceo */
+        --secondary-color: #292929; /* Gris oscuro */
+        --accent-color: #00ADB5; /* Azul verdoso */
+        --text-color: #EAEAEA; /* Blanco grisáceo */
+      }
+
+      body {
+        background: var(--primary-color);
+        color: var(--text-color);
+        font-family: 'Arial', sans-serif;
+      }
+
+      /* Navbar */
+      .navbar {
+        background: var(--secondary-color);
+        padding: 15px 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--accent-color);
+      }
+
+      .navbar-nav .nav-link {
+        color: var(--text-color);
+        font-size: 1rem;
+        margin-left: 15px;
+        transition: color 0.3s;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: var(--accent-color);
+      }
+
+      /* Sección Hero */
+      .hero-box {
+        background: var(--secondary-color);
+        padding: 40px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        max-width: 1200px;
+        margin: auto;
+        gap: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .hero-box img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-left: 30px; /* Separación de la imagen */
+      }
+
+      @media (max-width: 768px) {
+        .hero-box {
+          flex-direction: column;
+          text-align: center;
+        }
+        .hero-box img {
+          margin-left: 0;
+          margin-top: 15px;
+        }
+      }
+
+      /* Botones minimalistas */
+      .btn-custom {
+        background: var(--accent-color);
+        color: var(--text-color);
+        padding: 10px 20px;
+        border-radius: 25px;
+        border: none;
+        transition: background 0.3s;
+      }
+
+      .display-4{
+        color: #00ADB5;
+      }
+
+      .lead{
+        color: aqua;
+      }
+
+      .btn-custom:hover {
+        background: #007C86;
+      }
+
+      /* Secciones */
+      section {
+        padding: 80px 0;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        color: var(--accent-color);
+      }
+
+      /* Tarjetas */
+      .card {
+        background: var(--secondary-color);
+        color: var(--text-color);
+        border: none;
+        border-radius: 12px;
+      }
+
+      .card img {
+        border-radius: 12px 12px 0 0;
+      }
+
+      .card-body {
+        text-align: center;
+      }
+
+      /* Footer */
+      footer {
+        background: var(--secondary-color);
+        text-align: center;
+        padding: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Mi Portafolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Experiencia Laboral</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="about" class="d-flex align-items-center" style="min-height: 100vh;">
+      <div class="container d-flex justify-content-center">
+        <div class="hero-box">
+          <div>
+            <h1 class="display-4">¡Benjamin Angel Mayorca Yaranga!</h1>
+            <p class="lead" >Desarrollador web apasionado por crear soluciones elegantes y funcionales.</p>
+            <p>-Soy un desarrollador web con experiencia en HTML, CSS, JavaScript, WordPress (Elementor) y frameworks como Bootstrap.</p>
+            <p>-Mis objetivos son ayudar a las empresas a alcanzar sus metas creando sitios web atractivos y funcionales.</p>
+            <a href="#projects" class="btn btn-custom">Experiencia Laboral</a>
+          </div>
+          <img src="images/[removal.ai]_dcc9ff49-af95-4a23-9f12-4b46ca07d7b8-whatsapp-image-2024-06-03-at-9-35-06-am_8U9M68.png" alt="Mi foto">
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiencia Laboral -->
+    <section id="projects">
+      <div class="container">
+        <h2>Experiencia Laboral</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card">
+              <img src="images/consigue-ventas-e1732136651281.png" class="card-img-top" alt="Proyecto 1">
+              <div class="card-body">
+                <h5 class="card-title">Agencia Consigue Ventas</h5>
+                <p class="card-text">20/08/24 | 21/01/25.</p>
+                
+                <!-- Botón que despliega la pestaña -->
+                <button class="btn btn-custom" type="button" data-toggle="collapse" data-target="#info1">
+                  Ver más
+                </button>
+
+                <!-- Contenido oculto que se despliega -->
+                <div id="info1" class="collapse mt-3">
+                  <p>En esta empresa me desempeñé como desarrollador web, creando sitios optimizados con WordPress y Elementor.</p>
+                  <p>También trabajé con HTML, CSS, JavaScript y Bootstrap para personalizar las experiencias de usuario.</p>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="skills" class="py-5">
+      <div class="container">
+        <br>
+        <h2 class="text-center mb-5">Habilidades</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h5>HTML</h5>
+            <div class="progress mb-3">
+              <div class="progress-bar" role="progressbar" style="width: 90%;">90%</div>
+            </div>
+            <h5>CSS</h5>
+            <div class="progress mb-3">
+              <div class="progress-bar" role="progressbar" style="width: 90%;">90%</div>
+            </div>
+            <h5>PHP</h5>
+            <div class="progress mb-3">
+              <div class="progress-bar" role="progressbar" style="width: 60%;">60%</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h5>JavaScript</h5>
+            <div class="progress mb-3">
+              <div class="progress-bar" role="progressbar" style="width: 60%;">60%</div>
+            </div>
+            <h5>Bootstrap</h5>
+            <div class="progress mb-3">
+              <div class="progress-bar" role="progressbar" style="width: 65%;">65%</div>
+            </div>
+            <h5>WordPress</h5>
+            <div class="progress mb-3">
+              <div class="progress-bar" role="progressbar" style="width: 70%;">70%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contacto -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contacto</h2>
+    <div class="row justify-content-center">
+      
+      <!-- Teléfono -->
+      <div class="col-md-4 mb-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fas fa-phone fa-2x text-primary"></i>
+            <h5 class="mt-2">Teléfono</h5>
+            <p>+51 924 338 890</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- WhatsApp -->
+      <div class="col-md-4 mb-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fab fa-whatsapp fa-2x text-success"></i>
+            <h5 class="mt-2">WhatsApp</h5>
+            <p><a href="https://wa.me/51924338890" target="_blank">Envíame un mensaje</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="col-md-4 mb-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fab fa-linkedin fa-2x text-info"></i>
+            <h5 class="mt-2">LinkedIn</h5>
+            <p><a href="https://www.linkedin.com/in/benjam%C3%ADn-angel-mayorca-74316934a/" target="_blank">Mi perfil</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GitHub -->
+      <div class="col-md-4 mb-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fab fa-github fa-2x"></i>
+            <h5 class="mt-2">GitHub</h5>
+            <p><a href="https://github.com/Benjamin-AngelGitH2" target="_blank">Mis proyectos</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Correo -->
+      <div class="col-md-4 mb-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <i class="fas fa-envelope fa-2x text-danger"></i>
+            <h5 class="mt-2">Correo</h5>
+            <p><a href="mailto:correo@example.com">benjaminmayorca9y@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Agregar Font Awesome para los iconos -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Benjamin Angel. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
